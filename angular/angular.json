@@ -89,7 +89,23 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
-            }
+            },
+            "arithmetic": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.arithmetic.ts"
+                }
+              ]
+            },
+            "string-concatenation": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.string-concatenation.ts"
+                }
+              ]
+            },
           },
           "defaultConfiguration": "production"
         },
@@ -101,6 +117,12 @@
             },
             "development": {
               "browserTarget": "fed-angular-angular:build:development"
+            },
+            "arithmetic": {
+              "browserTarget": "fed-angular-angular:build:arithmetic"
+            },
+            "string-concatenation": {
+              "browserTarget": "fed-angular-angular:build:string-concatenation"
             }
           },
           "defaultConfiguration": "development"

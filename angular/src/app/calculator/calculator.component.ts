@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculatorService } from '../calculator-shared/calculator.service';
 
 @Component({
   selector: 'app-calculator',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
+  inputA: string = '';
+  inputB: string = '';
+  result: string = '';
 
-  constructor() { }
+  constructor(
+    private readonly calculatorService: CalculatorService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  calculate(): void { 
+    this.result = this.calculatorService.calculate({ inputA: this.inputA, inputB: this.inputB })
   }
 
 }
