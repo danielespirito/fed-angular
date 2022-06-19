@@ -18,10 +18,16 @@ There may be additional different implementations for different environments, wh
 2. Have the app able to be build for different environments, each with its own implementation.
 3. Future implementations should be able to be integrated in the same way without changing anything to the Calculator component and without having the component built again to get the new implementation. That is, you are not allowed to expose the component (or any of the component's dependencies) to any of the implementations.
 
-
 ## Running the project
 1. Install Yarn globally ```npm install -g yarn```.
-
 2. Go to angular directory.
 3. run ```yarn``` to install packages.
 4. run ```yarn start``` to start the development server.
+
+## Resolution
+For this problem, I created a base abstract service called ```CalculatorService```, with a unique method called ```calculate```. Then I extended the behavior of the base service with the ```ArithmeticCalculatorService``` and ```StringConcatenationCalculatorService```.  This concrete implementations override the base method with the expected behavior for each scenario. For each different environment, a specific module is loaded with a configuration for the DI provider, telling which concrete implementation of the ```CalculatorService``` shoud be injected.
+
+## Running calculator environments
+
+1. To run the arithmetic calculator, run ```yarn run start:arithmetic```
+1. To run the string concatenation calculator, run ```yarn run start:string-concatenation```

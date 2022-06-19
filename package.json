@@ -10,5 +10,9 @@
   },
   "workspaces": [
     "angular"
-  ]
+  ],
+  "scripts": {
+    "start:arithmetic": "yarn workspace fed-angular-angular run start:arithmetic",
+    "start:string-concatenation": "yarn workspace fed-angular-angular run start:string-concatenation"
+  }
 }
