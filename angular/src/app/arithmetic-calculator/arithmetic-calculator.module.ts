@@ -5,12 +5,12 @@ import { CalculatorService } from '../calculator-shared/calculator.service';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
+  imports: [CommonModule],
+  providers: [
+    {
+      provide: CalculatorService,
+      useClass: ArithmeticCalculatorService,
+    },
   ],
-  providers: [{ 
-    provide: CalculatorService, 
-    useClass: ArithmeticCalculatorService 
-  }]
 })
-export class ArithmeticCalculatorModule { }
+export class ArithmeticCalculatorModule {}

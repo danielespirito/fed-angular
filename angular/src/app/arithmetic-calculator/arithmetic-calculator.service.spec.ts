@@ -1,9 +1,11 @@
-import { ArithmeticCalculatorService } from "./arithmetic-calculator.service";
+import { ArithmeticCalculatorService } from './arithmetic-calculator.service';
 
 describe('ArithmeticCalculatorService', () => {
   let service: ArithmeticCalculatorService;
-  
-  beforeEach(() => { service = new ArithmeticCalculatorService();});
+
+  beforeEach(() => {
+    service = new ArithmeticCalculatorService();
+  });
 
   it('should return an "Error" string if one of inputs is invalid', () => {
     expect(service.calculate({ inputA: 'a', inputB: '2' })).toEqual('Error');

@@ -8,17 +8,14 @@ import { AppComponent } from './app.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CalculatorComponent,
-  ],
+  declarations: [AppComponent, CalculatorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    environment.calculatorLogicModule as any
+    environment.calculatorLogicModule as any,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

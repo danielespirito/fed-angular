@@ -5,9 +5,8 @@ import {
 } from '../calculator-shared/calculator.service';
 
 @Injectable()
-export class ArithmeticCalculatorService extends CalculatorService {
+export class StringConcatenationCalculatorService extends CalculatorService {
   calculate({ inputA, inputB }: CalculatorContext): string {
-    const result = Number(inputA) + Number(inputB);
-    return result ? result.toString() : 'Error';
+    return String(inputA) + String(inputB);
   }
 }
