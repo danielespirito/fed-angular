@@ -1,0 +1,14 @@
+{
+  "name": "fed-angular",
+  "packageManager": "yarn@3.2.1",
+  "author": {
+    "email": "hai.kedem@thinkup.global",
+    "name": "Hai Kedem"
+  },
+  "devDependencies": {
+    "@angular/cli": "^13.3.6"
+  },
+  "workspaces": [
+    "angular"
+  ]
+}
